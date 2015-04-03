@@ -4,11 +4,22 @@ from flask.ext.moment import Moment
 from datetime import datetime
 from flask.ext.wtf import Form
 from wtforms import StringField, SubmitField
-from wtforms.validators import Required 
+from wtforms.validators import Required
+from flask.ext.sqlalchemy import SQLAlchemy
+import os
 
+#general
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '1testingOnly2'
+#database
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = \
+	'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+db = SQLAlchemy(app)
+#css
 bootstrap = Bootstrap(app)
+#time
 moment = Moment(app)
 
 class NameForm(Form):
