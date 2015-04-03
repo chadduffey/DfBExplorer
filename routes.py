@@ -12,7 +12,7 @@ bootstrap = Bootstrap(app)
 moment = Moment(app)
 
 class NameForm(Form):
-	name = StringField('What is your name?', validators=[Required()])
+	name = StringField('Username:', validators=[Required()])
 	submit = SubmitField('Submit')
 
 @app.route('/', methods=['GET', 'POST'])
