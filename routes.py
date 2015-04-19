@@ -2,7 +2,7 @@ from flask import Flask, render_template, session, redirect, url_for, flash
 from flask.ext.bootstrap import Bootstrap
 from flask.ext.script import Manager, Shell
 from flask.ext.moment import Moment
-from flask.ext.mail import Mail  
+#from flask.ext.mail import Mail  
 from datetime import datetime
 from flask.ext.wtf import Form
 from wtforms import StringField, SubmitField
