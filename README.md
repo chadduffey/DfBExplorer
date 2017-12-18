@@ -1,6 +1,5 @@
 Dropbox for Business Explorer
-
-Uni Assignment for ITC303
+(Navigate the content in your DFB team)
 
 Python
 Flask
